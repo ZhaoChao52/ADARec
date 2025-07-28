@@ -9,8 +9,7 @@
   <a href="https://pytorch.org/" alt="PyTorch">
   <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?e&logo=PyTorch&logoColor=white" />
   </a>
-  <!-- 论文发表的会议 -->
-  <!- <a href="[会议链接]" alt="Conference"> -->
+
   <img src="https://img.shields.io/badge/Conference'YY-brightgreen" />
   </a>
 </p>
