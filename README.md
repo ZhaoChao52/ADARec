@@ -45,55 +45,47 @@ Sequential recommendation (SR) models' performance fundamentally relies on rich 
 - tqdm
 - wandb (optional)
 
-### Quick Start
+### Start
 
-Clone this repository and enter the project directory:
-```bash
-git clone [你的项目Git链接]
-cd [你的项目目录]
+```
+cd ./src
 ```
 
 To run the full ADARec model on different datasets, you can use the following commands. The scripts will train the model and evaluate it.
 
 **Training on the Beauty dataset:**
 ```bash
-python main.py \
-    --data_name Beauty \
-    --output_dir output/ \
-    --dual_expert \
-    --enable_adaptive_diffusion \
-    --use_gating_network \
-    --lr 0.001 \
-    --batch_size 256 \
-    --hidden_size 128 \
-    --num_attention_heads 2 \
-    --num_hidden_layers 2 \
-    --epochs 400 \
-    --gpu_id 0
+python3 main.py --data_name Beauty --cf_weight 0.1 \
+    --model_idx 1 --gpu_id 0 \
+    --output_dir output/Beauty/ \
+    --batch_size 256 --contrast_type Hybrid \
+    --num_intent_cluster 256 --seq_representation_type mean \
+    --intent_cf_weight 0.1 --num_hidden_layers 1 \
+    --enable_diffusion_aug --hidden_size 256 \
+    --attention_probs_dropout_prob --hidden_dropout_prob  \
+    --enable_adaptive_diffusion --dual_expert \
+    --epochs 400
 ```
 
 **Training on the Sports & Outdoors dataset:**
 ```bash
-python main.py \
-    --data_name Sports_and_Outdoors \
-    --output_dir output/ \
-    --dual_expert \
-    --enable_adaptive_diffusion \
-    --use_gating_network \
-    --lr 0.001 \
-    --batch_size 256 \
-    --hidden_size 128 \
-    --num_attention_heads 2 \
-    --num_hidden_layers 2 \
-    --epochs 400 \
-    --gpu_id 0
+python3 main.py --data_name Sports_and_Outdoors --cf_weight 0.1\
+    --model_idx 1 --gpu_id 0\
+    --output_dir output/Sports_and_Outdoors/ \
+    --batch_size 256 --contrast_type Hybrid \
+    --num_intent_cluster 256 --seq_representation_type mean \
+    --intent_cf_weight 0.1 --num_hidden_layers 2\
+    --enable_diffusion_aug --hidden_size 128 \
+    --attention_probs_dropout_prob --hidden_dropout_prob  \
+    --enable_adaptive_diffusion --dual_expert \
+    --epochs 400
 ```
 
 **Training on the Toys & Games dataset:**
 ```bash
 python main.py \
     --data_name Toys_and_Games \
-    --output_dir output/ \
+    --output_dir output/Toys_and_Games/ \
     --dual_expert \
     --enable_adaptive_diffusion \
     --use_gating_network \
@@ -110,7 +102,7 @@ python main.py \
 ```bash
 python main.py \
     --data_name Yelp \
-    --output_dir output/ \
+    --output_dir output/Yelp/ \
     --dual_expert \
     --enable_adaptive_diffusion \
     --use_gating_network \
