@@ -9,9 +9,6 @@
   <a href="https://pytorch.org/" alt="PyTorch">
   <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?e&logo=PyTorch&logoColor=white" />
   </a>
-
-  <img src="https://img.shields.io/badge/Conference'YY-brightgreen" />
-  </a>
 </p>
 
 </div>
