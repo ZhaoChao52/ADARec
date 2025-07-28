@@ -32,7 +32,6 @@ Sequential recommendation (SR) models' performance fundamentally relies on rich 
     <li><a href="#-usage">Usage</a></li>
     <li><a href="#-results">Results</a></li>
     <li><a href="#-acknowledgement">Acknowledgement</a></li>
-    <li><a href="#-citation">Citation</a></li>
   </ol>
 </details>
 
@@ -147,21 +146,7 @@ Our proposed ADARec framework demonstrates significant and consistent outperform
 ## 🙏 Acknowledgement
 
 Our implementation is built upon several excellent open-source projects. We extend our sincere gratitude to the authors for their valuable contributions.
-- [**SASRec-Pytorch**](https://github.com/pmixer/SASRec.pytorch): A PyTorch implementation of the SASRec model.
-- [**ICLRec**](https://github.com/salesforce/ICLRec): The official implementation of Intent Contrastive Learning for recommendation.
 - [**ELCRec**](https://github.com/yueliu1999/ELCRec): The official implementation for the NeurIPS'24 paper "End-to-end Learnable Clustering for Intent Learning in Recommendation", which inspired our work on intent learning.
 
-## 📝 Citation
-
-If you find our work and this repository helpful for your research, please consider citing our paper.
-
-```bibtex
-@inproceedings{ADARec,
-  title={De-collapsing User Intent: Adaptive Diffusion Augmentation with Mixture-of-Experts for Sequential Recommendation},
-  author={Your, Name, and Your, Co-author},
-  booktitle={Conference Name},
-  year={2024}
-}
-```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
