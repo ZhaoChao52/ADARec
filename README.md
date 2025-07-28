@@ -22,7 +22,7 @@ Sequential recommendation (SR) models' performance fundamentally relies on rich 
 </p>
 
 <div align="center">
-  <img src="./assets/adarec_framework.jpg" alt="ADARec Framework" width="800"/>
+  <img src="https://i.postimg.cc/tRhsr10S/adarec-framework.png" alt="ADARec Framework" width="800"/>
   <p>Figure 1. The overall architecture of the proposed ADARec framework.</p>
 </div>
 
