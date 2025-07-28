@@ -53,20 +53,6 @@ cd ./src
 
 To run the full ADARec model on different datasets, you can use the following commands. The scripts will train the model and evaluate it.
 
-**Training on the Beauty dataset:**
-```bash
-python3 main.py --data_name Beauty --cf_weight 0.1 \
-    --model_idx 1 --gpu_id 0 \
-    --output_dir output/Beauty/ \
-    --batch_size 256 --contrast_type Hybrid \
-    --num_intent_cluster 256 --seq_representation_type mean \
-    --intent_cf_weight 0.1 --num_hidden_layers 1 \
-    --enable_diffusion_aug --hidden_size 256 \
-    --attention_probs_dropout_prob --hidden_dropout_prob  \
-    --enable_adaptive_diffusion --dual_expert \
-    --epochs 400
-```
-
 **Training on the Sports & Outdoors dataset:**
 ```bash
 python3 main.py --data_name Sports_and_Outdoors --cf_weight 0.1\
@@ -81,21 +67,33 @@ python3 main.py --data_name Sports_and_Outdoors --cf_weight 0.1\
     --epochs 400
 ```
 
+
+**Training on the Beauty dataset:**
+```bash
+python3 main.py --data_name Beauty --cf_weight 0.1 \
+    --model_idx 1 --gpu_id 0 \
+    --output_dir output/Beauty/ \
+    --batch_size 256 --contrast_type Hybrid \
+    --num_intent_cluster 256 --seq_representation_type mean \
+    --intent_cf_weight 0.1 --num_hidden_layers 1 \
+    --enable_diffusion_aug --hidden_size 256 \
+    --attention_probs_dropout_prob --hidden_dropout_prob  \
+    --enable_adaptive_diffusion --dual_expert \
+    --epochs 400
+```
+
 **Training on the Toys & Games dataset:**
 ```bash
-python main.py \
-    --data_name Toys_and_Games \
+python3 main.py --data_name Toys_and_Games --cf_weight 0.1 \
+    --model_idx 1 --gpu_id 0 \
     --output_dir output/Toys_and_Games/ \
-    --dual_expert \
-    --enable_adaptive_diffusion \
-    --use_gating_network \
-    --lr 0.001 \
-    --batch_size 256 \
-    --hidden_size 128 \
-    --num_attention_heads 2 \
-    --num_hidden_layers 2 \
-    --epochs 400 \
-    --gpu_id 0
+    --batch_size 256 --contrast_type Hybrid \
+    --num_intent_cluster 256 --seq_representation_type mean \
+    --intent_cf_weight 0.1 --num_hidden_layers 3 \
+    --enable_diffusion_aug --hidden_size 128 \
+    --attention_probs_dropout_prob --hidden_dropout_prob  \
+    --enable_adaptive_diffusion --dual_expert \
+    --epochs 400
 ```
 
 **Training on the Yelp dataset:**
@@ -113,6 +111,16 @@ python main.py \
     --num_hidden_layers 2 \
     --epochs 400 \
     --gpu_id 0
+python3 main.py --data_name Yelp --cf_weight 0.1 \
+    --model_idx 1 --gpu_id 0 \
+    --output_dir output/Yelp/ \
+    --batch_size 256 --contrast_type Hybrid \
+    --num_intent_cluster 256 --seq_representation_type mean \
+    --intent_cf_weight 0.1 --num_hidden_layers 2 \
+    --enable_diffusion_aug --hidden_size 128 \
+    --attention_probs_dropout_prob --hidden_dropout_prob  \
+    --enable_adaptive_diffusion --dual_expert \
+    --epochs 400
 ```
 
 **Note:** You can adjust hyperparameters like `--deno_weight`, `--expl_weight`, `--intent_cf_weight`, etc., as needed for optimal performance on each dataset. Use `--do_eval` to evaluate a pre-trained model.
