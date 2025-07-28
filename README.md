@@ -120,7 +120,7 @@ Our proposed ADARec framework demonstrates significant and consistent outperform
 </div>
 
 <div align="center">
-  <img src="https://i.postimg.cc/9F4wcr55/table2-sparse-performance.png" alt="Performance on Sparse Sequences" width="100%"/>
+  <img src="https://i.postimg.cc/9F4wcr55/table2-sparse-performance.png" alt="Performance on Sparse Sequences" width="50%"/>
   <p>Table 2. Performance comparison on extremely sparse sequences (user history length ≤ 5).</p>
 </div>
 
