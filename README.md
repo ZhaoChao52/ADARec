@@ -1,15 +1,15 @@
 <div id="top" align="center">
 
-<h2><a href="[这里放你的论文链接]">De-collapsing User Intent: Adaptive Diffusion Augmentation with Mixture-of-Experts for Sequential Recommendation</a></h2>
+<h2><a href="[论文链接]">De-collapsing User Intent: Adaptive Diffusion Augmentation with Mixture-of-Experts for Sequential Recommendation</a></h2>
 
-<!-- 这里替换成你们团队成员的名字和主页链接 -->
-[Author 1](https://...), [Author 2](https://...), [Author 3](https://...), ...
+
+<!-- [Author 1](https://...), [Author 2](https://...), [Author 3](https://...), ... -->
 
 <p align="center">
   <a href="https://pytorch.org/" alt="PyTorch">
   <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?e&logo=PyTorch&logoColor=white" />
   </a>
-  <!-- 这里可以替换成你们论文发表的会议 -->
+  <!-- 论文发表的会议 -->
   <a href="[会议链接]" alt="Conference">
   <img src="https://img.shields.io/badge/Conference'YY-brightgreen" />
   </a>
@@ -18,7 +18,7 @@
 </div>
 
 <p align="justify">
-Sequential recommendation (SR) models' performance fundamentally relies on rich interaction data. However, in real-world scenarios, many users have sparse histories, leading to the "intent hierarchy collapse" problem, where models fail to capture the hierarchical nature of user intents. Existing data augmentation methods often overlook this, potentially generating misguided recommendations. To address this, we propose **ADARec**, a novel framework featuring **A**daptive **D**iffusion **A**ugmentation for **Rec**ommendation. Critically, instead of using a diffusion model as a black-box generator, we leverage its entire step-wise denoising trajectory to explicitly reconstruct a user's intent hierarchy, from coarse- to fine-grained, even from a single sparse sequence. To ensure both efficiency and effectiveness, ADARec introduces three key innovations: (1) An **Adaptive Depth Controller (ADC)** intelligently determines the optimal augmentation depth for each sequence. (2) A **Hierarchical Diffusion Augmentation (HDA)** module generates a rich, structured intent hierarchy. (3) A specialized **Hierarchical Parsing Mixture-of-Experts (HP-MoE)** architecture decouples and processes intents at different granularities. Experiments show ADARec significantly outperforms state-of-the-art methods, especially on sparse sequences, demonstrating its superior ability to de-collapse and reconstruct hierarchical user intent representations.
+Sequential recommendation (SR) models' performance fundamentally relies on rich interaction data. However, in real-world scenarios, many users have sparse histories, leading to the "intent hierarchy collapse" problem, where models fail to capture the hierarchical nature of user intents. Existing data augmentation methods often overlook this, potentially generating misguided recommendations. To address this, we propose ADARec, a novel framework featuring Adaptive Diffusion Augmentation for Recommendation. Critically, instead of using a diffusion model as a black-box generator, we leverage its entire step-wise denoising trajectory to explicitly reconstruct a user's intent hierarchy, from coarse- to fine-grained, even from a single sparse sequence. To ensure both efficiency and effectiveness, ADARec introduces three key innovations: (1) An Adaptive Depth Controller (ADC) intelligently determines the optimal augmentation depth for each sequence. (2) A Hierarchical Diffusion Augmentation (HDA) module generates a rich, structured intent hierarchy. (3) A specialized Hierarchical Parsing Mixture-of-Experts (HP-MoE) architecture decouples and processes intents at different granularities. Experiments show ADARec significantly outperforms state-of-the-art methods, especially on sparse sequences, demonstrating its superior ability to de-collapse and reconstruct hierarchical user intent representations.
 </p>
 
 <!-- 假设你已经有了一张类似论文图3的框架图，并保存在 assets/adarec_framework.png -->
