@@ -131,26 +131,17 @@ python main.py \
 
 Our proposed ADARec framework demonstrates significant and consistent outperformance across all benchmarks, especially on sparse user sequences.
 
-<!-- 假设你已经将论文中的表格1、2、3截图并保存 -->
-<img src="./assets/table1_overall_performance.png" alt="Overall Performance Comparison" width="800"/>
-<p align="center">
-Table 1. Overall performance comparison on four benchmark datasets.
-</p>
 
-<img src="./assets/table2_sparse_performance.png" alt="Performance on Sparse Sequences" width="800"/>
-<p align="center">
-Table 2. Performance comparison on extremely sparse sequences (user history length < 5).
-</p>
+<div align="center">
+  <img src="./assets/table1_overall_performance.jpg" alt="Overall Performance Comparison" width="800"/>
+  <p>Table 1. Overall performance comparison on four benchmark datasets.</p>
+</div>
 
-<img src="./assets/table3_ablation_study.png" alt="Ablation Study Results" width="800"/>
-<p align="center">
-Table 3. Ablation study results, highlighting the contribution of each component in ADARec.
-</p>
+<div align="center">
+  <img src="./assets/table2_sparse_performance.jpg" alt="Performance on Sparse Sequences" width="800"/>
+  <p>Table 2. Performance comparison on extremely sparse sequences (user history length < 5).</p>
+</div>
 
-<img src="./assets/figure6_tsne_visualization.png" alt="t-SNE Visualization" width="800"/>
-<p align="center">
-Figure 2. t-SNE visualization on the sparse Yelp dataset, showing ADARec's ability to learn clear, well-separated intent clusters compared to a strong baseline.
-</p>
 
 
 ## 🙏 Acknowledgement
