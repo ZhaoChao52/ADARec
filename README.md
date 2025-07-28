@@ -21,16 +21,10 @@
 Sequential recommendation (SR) models' performance fundamentally relies on rich interaction data. However, in real-world scenarios, many users have sparse histories, leading to the "intent hierarchy collapse" problem, where models fail to capture the hierarchical nature of user intents. Existing data augmentation methods often overlook this, potentially generating misguided recommendations. To address this, we propose ADARec, a novel framework featuring Adaptive Diffusion Augmentation for Recommendation. Critically, instead of using a diffusion model as a black-box generator, we leverage its entire step-wise denoising trajectory to explicitly reconstruct a user's intent hierarchy, from coarse- to fine-grained, even from a single sparse sequence. To ensure both efficiency and effectiveness, ADARec introduces three key innovations: (1) An Adaptive Depth Controller (ADC) intelligently determines the optimal augmentation depth for each sequence. (2) A Hierarchical Diffusion Augmentation (HDA) module generates a rich, structured intent hierarchy. (3) A specialized Hierarchical Parsing Mixture-of-Experts (HP-MoE) architecture decouples and processes intents at different granularities. Experiments show ADARec significantly outperforms state-of-the-art methods, especially on sparse sequences, demonstrating its superior ability to de-collapse and reconstruct hierarchical user intent representations.
 </p>
 
-<div align="center">
-  <img src="https://i.postimg.cc/tRhsr10S/adarec-framework.png" alt="ADARec Framework" width="800"/>
-  <p>Figure 1. The overall architecture of the proposed ADARec framework.</p>
-</div>
-
 <details>
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#-usage">Usage</a></li>
-    <li><a href="#-results">Results</a></li>
     <li><a href="#-acknowledgement">Acknowledgement</a></li>
   </ol>
 </details>
@@ -111,23 +105,6 @@ python3 main.py --data_name Yelp --cf_weight 0.1 \
 ```
 
 **Note:** To evaluate the model's performance on truncated user histories, you can utilize the --shorten_seq_to argument. For instance, append --shorten_seq_to 5 or --shorten_seq_to 3 to the command line to simulate scenarios with shorter sequence lengths.
-
-
-## 📊 Results
-
-Our proposed ADARec framework demonstrates significant and consistent outperformance across all benchmarks, especially on sparse user sequences.
-
-
-<div align="center">
-  <img src="./assets/table1_overall_performance.jpg" alt="Overall Performance Comparison" width="800"/>
-  <p>Table 1. Overall performance comparison on four benchmark datasets.</p>
-</div>
-
-<div align="center">
-  <img src="./assets/table2_sparse_performance.jpg" alt="Performance on Sparse Sequences" width="800"/>
-  <p>Table 2. Performance comparison on extremely sparse sequences (user history length ≤ 5).</p>
-</div>
-
 
 
 ## 🙏 Acknowledgement
