@@ -1,6 +1,6 @@
 <div id="top" align="center">
 
-<h2><a href="[论文链接]">De-collapsing User Intent: Adaptive Diffusion Augmentation with Mixture-of-Experts for Sequential Recommendation</a></h2>
+<h2><a>De-collapsing User Intent: Adaptive Diffusion Augmentation with Mixture-of-Experts for Sequential Recommendation</a></h2>
 
 
 <!-- [Author 1](https://...), [Author 2](https://...), [Author 3](https://...), ... -->
