@@ -110,7 +110,7 @@ python3 main.py --data_name Yelp --cf_weight 0.1 \
     --epochs 400
 ```
 
-**Note:** You can adjust hyperparameters like `--deno_weight`, `--expl_weight`, `--intent_cf_weight`, etc., as needed for optimal performance on each dataset. Use `--do_eval` to evaluate a pre-trained model.
+**Note:** To evaluate the model's performance on truncated user histories, you can utilize the --shorten_seq_to argument. For instance, append --shorten_seq_to 5 or --shorten_seq_to 3 to the command line to simulate scenarios with shorter sequence lengths.
 
 
 ## 📊 Results
@@ -125,7 +125,7 @@ Our proposed ADARec framework demonstrates significant and consistent outperform
 
 <div align="center">
   <img src="./assets/table2_sparse_performance.jpg" alt="Performance on Sparse Sequences" width="800"/>
-  <p>Table 2. Performance comparison on extremely sparse sequences (user history length < 5).</p>
+  <p>Table 2. Performance comparison on extremely sparse sequences (user history length ≤ 5).</p>
 </div>
 
 
