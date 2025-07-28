@@ -43,7 +43,7 @@ Sequential recommendation (SR) models' performance fundamentally relies on rich 
 - faiss-gpu
 - numpy
 - tqdm
-- wandb (optional)
+- wandb
 
 ### Start
 
